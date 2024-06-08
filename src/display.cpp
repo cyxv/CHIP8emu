@@ -48,7 +48,6 @@ bool Display::get_pixel(int x, int y) {
 	return pixel_states[x][y];
 }
 
-// this is laggy as fuck refactor later (and just dont execute it every frame IG)
 bool Display::update_screen() {
 	ClearBackground({ 0, 0, 0, 255 });
 	for (int x = 0; x < pixel_states.size(); x++) {
