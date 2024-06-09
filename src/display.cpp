@@ -31,7 +31,6 @@ void Display::end() {
 	CloseWindow();
 }
 
-// x is 0-63, y is 0-31
 bool Display::fill_pixel(int x, int y) {
 	int relative_x = x * config::pixel_size, relative_y = y * config::pixel_size;
 
@@ -54,7 +53,6 @@ bool Display::update_screen() {
 		for (int y = 0; y < pixel_states[y].size(); y++) {
 			if (pixel_states[x][y]) {
 				fill_pixel(x, y);
-				//std::cout << "filled " << x << ", " << y << "\n";
 			}
 		}
 	}

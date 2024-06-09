@@ -1,7 +1,5 @@
 #include "CPU.h"
 
-// 0xD
-
 CPU::CPU(Memory* memory, Display* display, Input* input) {
 	_memory = memory;
 	_display = display;
@@ -50,7 +48,6 @@ bool CPU::decode_execute(unsigned short instruction) {
 	// execute CPU instruction
 	switch (opcode) {
 	case 0:
-		//if (NNN == 0x0E0) {
 		switch (NNN) {
 		case 0xE0:
 			_display->clear_screen();

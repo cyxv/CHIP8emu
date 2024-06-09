@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
 
 	if (argc != 2) {
 		std::cout << "Please supply a ROM.\n";
-		return 0;
+		return 1;
 	}
 	memory.load_rom(argv[1]);
 
